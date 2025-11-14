@@ -22,6 +22,7 @@ server.use(cors())
 server.use(express.json())
 server.use(express.urlencoded({ extended: true }))
 
+server.set('view engine', 'ejs')
 server.use('/', router)
 
 server.listen(PORT, ()=> console.log(`Well here we go again..: ${PORT}`))
